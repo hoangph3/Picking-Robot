@@ -1,0 +1,4 @@
+train: /u01/workspace/hoangph3/Picking-Robot
+val: /u01/workspace/hoangph3/Picking-Robot
+nc: 2
+names: ["top", "overlap"]

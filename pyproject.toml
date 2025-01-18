@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "picking_robot"
+version = "1.0.0"
+requires-python = ">=3.10"
+description = "Picking Robot"
+readme = "README.md"
+keywords = [
+    'deep learning',
+    'computer vision',
+]
+dependencies = [
+    "ultralytics==8.3.63",
+]
+
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["picking_robot", "picking_robot.*"] } }
+include-package-data = true
+
+[tool.setuptools.package-data]
+'picking_robot.checkpoints' = ['*.pt']
+'picking_robot.configs' = ['*.yaml', '*.yml']
+
+[project.urls]
+repository = "https://github.com/hoangph3/Picking-Robot"
+
+[project.scripts]
+picking_robot = "picking_robot.cli.toolkit:cli"

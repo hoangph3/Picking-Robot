@@ -6,6 +6,17 @@ __pycache__/
 # C extensions
 *.so
 
+# Torch
+*.pt
+
+# Data
+data/
+dataset/
+notebooks/
+
+# Logs
+logs/
+
 # Distribution / packaging
 .Python
 build/
