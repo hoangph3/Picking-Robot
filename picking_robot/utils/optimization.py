@@ -9,7 +9,7 @@ def find_similar_box(contour, bbox, widths=np.arange(50, 300, 10), angles=np.ara
     best_box = bbox
     best_iou = calculate_iou(contour, best_box)
 
-    for width in tqdm(widths):  # brute-force width
+    for width in widths:  # brute-force width
         for angle in angles:  # brute-force angle
             resized_box = resize_box(center, width, width * length_devide_by_width)
             rotated_box = rotate_box(resized_box, angle, center)
